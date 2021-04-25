@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Header from './Component/Header'
+import TouristList from './Component/TouristList'
+import {Container} from 'react-bootstrap/'
+import {ListProvider} from './AppContext'
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
+import ErrorPage from './Component/ErrorPage';
+import TouristDetail from './Component/TouristDetail';
 
 function App() {
   return (
+    <Container>
+      <ListProvider>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <Router>
+        <Switch>
+      <Route path='/Tourism-app' exact component={TouristList}></Route>
+      <Route path='/detail/:id' exact component={TouristDetail}></Route>
+      <Route path='/'  component={ErrorPage}></Route>
+      </Switch>
+      </Router>
     </div>
+    </ListProvider>
+    </Container>
+    
   );
 }
 
