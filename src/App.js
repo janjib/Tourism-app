@@ -5,7 +5,7 @@ import TouristList from './Component/TouristList'
 import {Container} from 'react-bootstrap/'
 import {ListProvider} from './AppContext'
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
-import ErrorPage from './Component/ErrorPage';
+
 import TouristDetail from './Component/TouristDetail';
 
 function App() {
@@ -16,9 +16,9 @@ function App() {
       <Header/>
       <Router>
         <Switch>
-      <Route path='/Tourism-app' exact component={TouristList}></Route>
-      <Route path='/detail/:id' exact component={TouristDetail}></Route>
-      <Route path='/'  component={ErrorPage}></Route>
+      <Route path='/' exact component={TouristList}></Route>
+      <Route path='/detail/:id'  component={TouristDetail}></Route>
+      
       </Switch>
       </Router>
     </div>
