@@ -42,7 +42,7 @@ const TouristDetail = () => {
                 
             </div>
             <div className="detail-button">
-                 <Button className='mx-auto d-block my-5 text-center' variant='primary' onClick={()=> history.push('/')}>Go back</Button>
+                 <Button className='mx-auto d-block my-5 text-center' variant='primary' onClick={()=> history.push('/Tourism-app')}>Go back</Button>
                 </div>
         </div>
     )

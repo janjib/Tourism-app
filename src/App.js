@@ -16,7 +16,7 @@ function App() {
       <Header/>
       <Router>
         <Switch>
-      <Route path='/' exact component={TouristList}></Route>
+      <Route path='/Tourism-app' exact component={TouristList}></Route>
       <Route path='/detail/:id'  component={TouristDetail}></Route>
       
       </Switch>
